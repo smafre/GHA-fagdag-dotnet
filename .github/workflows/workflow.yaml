@@ -1,0 +1,55 @@
+
+on:
+  push:
+    branches:
+      - 'main'
+
+env:
+  AZURE_FUNCTIONAPP_NAME: 'github-fagdag-ruben-test' # For Oppgave 8: Sett inn navn på din egen Azure function app
+  AZURE_FUNCTIONAPP_PACKAGE_PATH: '.' # Function app path (denne trenger du ikke endre)
+
+jobs:
+  build-and-test:
+    runs-on: windows-latest
+    steps:
+      - name: 'Sjekk ut koden'
+        uses: actions/checkout@v4
+
+      # Oppgave 3: Sette opp riktig .net versjon før bygging (Denne er gjort feridg for dere)
+      - name: Setup DotNet Environment
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      # Oppgave 4: Bygge koden:
+#      - name: Build the project
+#        run: 
+
+      # Oppgave 5: Kjører testene i prosjektet. Feiler jobben dersom tester feiler.
+#      - name: Run tests
+#        run: 
+        
+      # Oppgave 6: List ut nuget dependencies med sårbarheter. 
+      # Feiler ikke jobben dersom den finner noe,
+      # (Men det er mulig å sette opp)
+#      - name: Check for vulnerable nuget dependencies
+#        run: 
+      
+      # Oppgave 7: Installer dotnet format verktøyet    
+#      - name: Install dotnet-format tool
+#        run: 
+        
+      # Oppgave 7: Kjør dotnet format verktøyet for å sjekke kode formatering.
+      # Feiler jobben dersom noen lint feil blir funnet
+#      - name: Run dotnet format tool (lint the code)
+#        run: 
+
+      # Oppgave 8: Deploy step, sett navnet på din function app, i env.AZURE_FUNCTIONAPP_NAME
+      # Og legg publish profile i en Github secret med navn AZURE_FUNCTIONAPP_PUBLISH_PROFILE
+      # Dette steget er ferdig satt opp, her trengs ingen endringer. bare å fjerne kommentar blokken:
+#      - name: 'Deploy til Azure Functions app'
+#        uses: Azure/functions-action@v1
+#        with:
+#          app-name: ${{ env.AZURE_FUNCTIONAPP_NAME }}
+#          package: '${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}/output'
+#          publish-profile: ${{ secrets.AZURE_FUNCTIONAPP_PUBLISH_PROFILE }}
