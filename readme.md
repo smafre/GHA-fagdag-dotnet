@@ -21,12 +21,14 @@ Vi kan holde oss til å jobbe i `main` branchen.
 *Dette prosjektet er et lite "mandags-prosjekt", og det har en unit-test som kanskje ikke virker som den skal, en dependency med en kjent sårbarhet, samt en eller flere lint/formaterings feil.
 Dette skal vi forsøke å finne ved hjelp Github actions `steps`, og fikse med nye commits.*
 
+Pga muligens lite tid, er oppgave 2 og 3 gjort ferdig for dere.
+
 1. "Fork" repoet, slik at du har det på din egen Github konto og kan committe og herje på med Github actions.
 2. I workflow.yaml filen, sett opp en `job` som gjør følgende: 
    1. Kjører ved alle nye commits på `main` branchen
    2. Bruker ubuntu-latest til å kjøre jobben
    3. Og et `step` som Sjekker ut koden i repoet (`actions/checkout@v4`)
-3. Legg til en `action` som setter opp .net miljøet vi skal bruke til å bygge koden (solutionen). Bruk .net versjon `8.0.x`. (Denne er gjort feridg for dere)
+3. Legg til en `action` som setter opp .net miljøet vi skal bruke til å bygge koden (solutionen). Bruk .net versjon `8.0.x`.
 4. Legg til en action som bruker `dotnet` verktøyet for å bygge solutionen, i Release mode, til mappen: `./output`. (Vi skal deploye fra den mappen i opg 8) (Se om du får `Build succeeded` i job loggen) (`dotnet build --configuration Release --output ./output`)
 5. Legg til en action som kjører unit testene i `Tests` prosjektet. (`dotnet test --verbosity minimal`)
    1. Dersom den klarte å kjøre testene, var det noe som feilet?
