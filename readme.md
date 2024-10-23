@@ -28,7 +28,7 @@ Pga muligens lite tid, er oppgave 2 og 3 gjort ferdig for dere.
    1. Kjører ved alle nye commits på `main` branchen
    2. Bruker ubuntu-latest til å kjøre jobben
    3. Og et `step` som Sjekker ut koden i repoet (`actions/checkout@v4`)
-3. Legg til en `action` som setter opp .net miljøet vi skal bruke til å bygge koden (solutionen). Bruk .net versjon `8.0.x`.
+3. Legg til en `action` som setter opp .net miljøet vi skal bruke til å bygge koden (solutionen). Bruk .net versjon `8.0.x`. (Denne er gjort feridg for dere)
 4. Legg til en action som bruker `dotnet` verktøyet for å bygge solutionen, i Release mode, til mappen: `./output`. (Vi skal deploye fra den mappen i opg 8) (Se om du får `Build succeeded` i job loggen) (`dotnet build --configuration Release --output ./output`)
 5. Legg til en action som kjører unit testene i `Tests` prosjektet. (`dotnet test --verbosity minimal`)
    1. Dersom den klarte å kjøre testene, var det noe som feilet?
@@ -46,3 +46,6 @@ Pga muligens lite tid, er oppgave 2 og 3 gjort ferdig for dere.
 - Oppgave 5, 6 eller 7 kan skippes, dersom du har problemer med en av de (bare kommenter ut eller fjern de fra workflow filen), eller vil forsøke å deploye til Azure.
 
 
+Mer informasjon om bygging og testing av .net prosjekter med Github actions: https://docs.github.com/en/actions/use-cases-and-examples/building-and-testing/building-and-testing-net
+
+Eksempel på workflow fil for å deploye C# .net core til Azure function app (Men eldre .net versjon): https://github.com/Azure/actions-workflow-samples/blob/master/FunctionApp/windows-dotnet-functionapp-on-azure.yml 
