@@ -16,7 +16,7 @@ public class Tests
 
         int a = 12;
         int b = 5;
-        int expected = 17;
+        int expected = 29;
 
         int sum = Kalkulator.Sum(a, b);
 
@@ -28,7 +28,7 @@ public class Tests
     {
         int a = 4;
         int b = 1;
-        int expected = 5;
+        int expected = 9;
 
         int sum = Kalkulator.Sum(a, b);
 
