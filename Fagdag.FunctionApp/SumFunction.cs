@@ -30,6 +30,6 @@ public class SumFunction
 
         int sum = Kalkulator.Sum(num1, num2);
 
-        return new OkObjectResult($"Summen av {num1} og {num2} er: {sum}.");
+        return new OkObjectResult($"Summen av {num1} og {num2} er: {sum}. I denne versjonen har vi dermed skapt merverdi for kunden.");
     }
 }
