@@ -36,7 +36,7 @@ jobs:
         run: dotnet list package --vulnerable
       
       # Oppgave 7: Installer dotnet format verktøyet    
-#      - name: Install dotnet-format tool
+      - name: Install dotnet-format tool
         run: dotnet tool install -g dotnet-format
         
       # Oppgave 7: Kjør dotnet format verktøyet for å sjekke kode formatering.
