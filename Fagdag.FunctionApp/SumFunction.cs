@@ -31,7 +31,8 @@ public class SumFunction
         int sum = Kalkulator.Sum(num1, num2);
 
         var random = new Random();
-        int randomNumber = random.Next(1, 11); // Generates a number between 1 (inclusive) and 11 (exclusive)
+        // Generates a number between 1 (inclusive) and 11 (exclusive)
+        int randomNumber = random.Next(1, 11);
         
         if (randomNumber == 5) {
             return new OkObjectResult($"Du er heldig vinner av {sum} dollars og en tur for to til Åsane! Gratulerer! 🍾🥂🥳");
