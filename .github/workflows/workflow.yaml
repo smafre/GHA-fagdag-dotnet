@@ -23,7 +23,7 @@ jobs:
 
       # Oppgave 4: Bygge koden:
       - name: Build the project
-        run: dotnet build
+        run: dotnet build --configuration Release -o ./output
 
       # Oppgave 5: Kjører testene i prosjektet. Feiler jobben dersom tester feiler.
 #      - name: Run tests
