@@ -28,7 +28,7 @@ public class Tests
     {
         int a = 4;
         int b = 1;
-        int expected = 9;
+        int expected = 5;
 
         int sum = Kalkulator.sum(a, b);
 
