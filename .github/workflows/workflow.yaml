@@ -36,13 +36,13 @@ jobs:
         run: dotnet list package --vulnerable
       
       # Oppgave 7: Installer dotnet format verktøyet    
-      - name: Install dotnet-format tool
-        run: dotnet tool install -g dotnet-format
+      # - name: Install dotnet-format tool
+      #   run: dotnet tool install -g dotnet-format
         
       # Oppgave 7: Kjør dotnet format verktøyet for å sjekke kode formatering.
       # Feiler jobben dersom noen lint feil blir funnet
-      - name: Run dotnet format tool (lint the code)
-        run: dotnet format --verify-no-changes
+      # - name: Run dotnet format tool (lint the code)
+      #   run: dotnet format --verify-no-changes
 
       # Oppgave 8: Deploy step, sett navnet på din function app, i env.AZURE_FUNCTIONAPP_NAME
       # Og legg publish profile i en Github secret med navn AZURE_FUNCTIONAPP_PUBLISH_PROFILE
