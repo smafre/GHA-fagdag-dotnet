@@ -10,7 +10,7 @@ env:
 
 jobs:
   build-and-test:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       - name: 'Sjekk ut koden'
         uses: actions/checkout@v4
