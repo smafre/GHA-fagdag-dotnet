@@ -26,8 +26,8 @@ jobs:
         run: dotnet build --configuration Release -o ./output
 
       # Oppgave 5: Kjører testene i prosjektet. Feiler jobben dersom tester feiler.
-#      - name: Run tests
-#        run: 
+      - name: Run tests
+        run: dotnet test --verbosity minimal
         
       # Oppgave 6: List ut nuget dependencies med sårbarheter. 
       # Feiler ikke jobben dersom den finner noe,
