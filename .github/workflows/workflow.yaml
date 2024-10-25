@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - 'main'
+  workflow_dispatch
 
 env:
   AZURE_FUNCTIONAPP_NAME: 'github-fagdag-ruben-test' # For Oppgave 8: Sett inn navn på din egen Azure function app
@@ -10,7 +11,7 @@ env:
 
 jobs:
   build-and-test:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       - name: 'Sjekk ut koden'
         uses: actions/checkout@v4
