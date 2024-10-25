@@ -21,6 +21,21 @@ jobs:
         with:
           dotnet-version: '8.0.x'
 
+      # Oppgave 6: List ut nuget dependencies med sårbarheter. 
+      # Feiler ikke jobben dersom den finner noe,
+      # (Men det er mulig å sette opp)
+      - name: Check for vulnerable nuget dependencies
+        run: dotnet list package --vulnerable
+
+      # Oppgave 7: Kjør dotnet format verktøyet for å sjekke kode formatering.
+      # Feiler jobben dersom noen lint feil blir funnet
+      - name: Run dotnet format tool (lint the code)
+        run: dotnet format --verify-no-changes
+
+      # Oppgave 7: Installer dotnet format verktøyet    
+      - name: Install dotnet-format tool
+        run: dotnet tool install -g dotnet-format
+
       # Oppgave 4: Bygge koden:
       - name: Build the project
         run: dotnet build --configuration Release -o ./output
@@ -28,21 +43,6 @@ jobs:
       # Oppgave 5: Kjører testene i prosjektet. Feiler jobben dersom tester feiler.
       - name: Run tests
         run: dotnet test --verbosity minimal
-        
-      # Oppgave 6: List ut nuget dependencies med sårbarheter. 
-      # Feiler ikke jobben dersom den finner noe,
-      # (Men det er mulig å sette opp)
-      - name: Check for vulnerable nuget dependencies
-        run: dotnet list package --vulnerable
-      
-      # Oppgave 7: Installer dotnet format verktøyet    
-      - name: Install dotnet-format tool
-        run: dotnet tool install -g dotnet-format
-        
-      # Oppgave 7: Kjør dotnet format verktøyet for å sjekke kode formatering.
-      # Feiler jobben dersom noen lint feil blir funnet
-      - name: Run dotnet format tool (lint the code)
-        run: dotnet format --verify-no-changes
 
       # Oppgave 8: Deploy step, sett navnet på din function app, i env.AZURE_FUNCTIONAPP_NAME
       # Og legg publish profile i en Github secret med navn AZURE_FUNCTIONAPP_PUBLISH_PROFILE
