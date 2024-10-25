@@ -28,7 +28,7 @@ public class SumFunction
             return new BadRequestObjectResult("Oppgi to tall, som GET parameter: 'a' og 'b'.");
         }
 
-        int sum = Kalkulator.sum(num1, num2);
+        int sum = Kalkulator.Sum(num1, num2);
 
         return new OkObjectResult($"Summen av {num1} og {num2} er: {sum}.");
     }
