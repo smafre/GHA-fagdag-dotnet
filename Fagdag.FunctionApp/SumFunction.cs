@@ -33,7 +33,7 @@ public class SumFunction
         var random = new Random();
         // Generates a number between 1 (inclusive) and 11 (exclusive)
         int randomNumber = random.Next(1, 11);
-        
+
         if (randomNumber == 5) {
             return new OkObjectResult($"Du er heldig vinner av {sum} dollars og en tur for to til Åsane! Gratulerer! 🍾🥂🥳");
         }
