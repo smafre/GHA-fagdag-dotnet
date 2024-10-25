@@ -1,9 +1,9 @@
 
 on:
-  push:
-    branches:
-      - 'main'
   workflow_dispatch
+  # push:
+  #   branches:
+  #     - 'main'
 
 env:
   AZURE_FUNCTIONAPP_NAME: 'github-fagdag-ruben-test' # For Oppgave 8: Sett inn navn på din egen Azure function app
