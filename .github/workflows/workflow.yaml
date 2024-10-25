@@ -22,8 +22,8 @@ jobs:
           dotnet-version: '8.0.x'
 
       # Oppgave 4: Bygge koden:
-#      - name: Build the project
-#        run: 
+      - name: Build the project
+        run: dotnet build
 
       # Oppgave 5: Kjører testene i prosjektet. Feiler jobben dersom tester feiler.
 #      - name: Run tests
